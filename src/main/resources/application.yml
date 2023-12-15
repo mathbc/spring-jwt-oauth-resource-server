@@ -1,0 +1,18 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/spring_jwt_resource_server
+    username: root
+    password: Ma@4410.
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  port: 8080
+  error:
+    include-message: always
+
+rsa:
+  private-key: classpath:certs/private-key.pem
+  public-key: classpath:certs/public-key.pem
